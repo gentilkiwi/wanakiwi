@@ -7,7 +7,7 @@ The original method is based on Adrien Guinet's [wannakey] (https://github.com/a
 
 Adrien's method was originally described as only valid for Windows XP but we proven this can be extended to Windows 7.
 
-**Wanakiwi** is based on the above method and **Wanadecrypt** which makes possible for lucky users to :
+**Wanakiwi** is based on the above method and [Wanadecrypt] (https://github.com/gentilkiwi/wanadecrypt) which makes possible for lucky users to :
 - Recover the private user key in memory to save it as `00000000.dky`
 - Decrypt all of their files
 
