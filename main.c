@@ -159,7 +159,7 @@ int wmain(int argc, wchar_t * argv[])
 	return 0;
 }
 
-const PCWCHAR proc[] = {L"wnry.exe", L"wcry.exe", L"data_1.exe", L"ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa.exe"};
+const PCWCHAR proc[] = {L"wnry.exe", L"wcry.exe", L"data_1.exe", L"ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa.exe", L"tasksche.exe"};
 DWORD findProcess()
 {
 	DWORD i, p = 0;
