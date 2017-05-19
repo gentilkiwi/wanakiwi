@@ -3,11 +3,11 @@
 ## Introduction
 This utility allows machines infected by the WannaCry ransomware to recover their files.
 
-The original method is based on Adrien Guinet's [wannakey] (https://github.com/aguinet/wannakey) which consist of scanning the WannaCry process memory to recover the prime numbers that were not cleaned during CryptReleaseContext().
+The original method is based on Adrien Guinet's [wannakey](https://github.com/aguinet/wannakey) which consist of scanning the WannaCry process memory to recover the prime numbers that were not cleaned during CryptReleaseContext().
 
 Adrien's method was originally described as only valid for Windows XP but we proven this can be extended to Windows 7.
 
-**Wanakiwi** is based on the above method and **Wanadecrypt** which makes possible for lucky users to :
+**Wanakiwi** is based on the above method and [Wanadecrypt](https://github.com/gentilkiwi/wanadecrypt) which makes possible for lucky users to :
 - Recover the private user key in memory to save it as `00000000.dky`
 - Decrypt all of their files
 
