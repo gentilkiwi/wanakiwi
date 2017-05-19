@@ -7,7 +7,7 @@ This utility allows machines infected by the WannaCry ransomware to recover thei
 - Recover the private user key in memory to save it as `00000000.dky`
 - Decrypt all of their files
 
-The primes extraction method is based on Adrien Guinet's [wannakey] (https://github.com/aguinet/wannakey) which consist of scanning the WannaCry process memory to recover the prime numbers that were not cleaned during CryptReleaseContext().
+The primes extraction method is based on Adrien Guinet's [wannakey](https://github.com/aguinet/wannakey) which consist of scanning the WannaCry process memory to recover the prime numbers that were not cleaned during CryptReleaseContext().
 
 Adrien's method was originally described as only valid for Windows XP but @msuiche and I proved this can be extended to Windows 7.
 
