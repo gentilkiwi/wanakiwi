@@ -31,7 +31,6 @@ int wmain(int argc, wchar_t * argv[])
 	DECRYPT_DATA dData = {0};
 	RSA_MEMORY kData = {0};
 
-
 	if(CryptAcquireContext(&dData.hProv, NULL, NULL, PROV_RSA_AES, CRYPT_VERIFYCONTEXT)) // we'll do RSA / AES stuff
 	{
 		kull_m_string_args_byName(argc, argv, L"pubsearch", &szPubSearch, L"c:");
