@@ -54,6 +54,7 @@
     <ClCompile Include="fileutil.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="process.c" />
+    <ClCompile Include="regutil.c" />
     <ClCompile Include="rsautil.c" />
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +137,7 @@
     <ClInclude Include="inc\openssl\x509_vfy.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="process.h" />
+    <ClInclude Include="regutil.h" />
     <ClInclude Include="rsautil.h" />
   </ItemGroup>
   <ItemGroup>
