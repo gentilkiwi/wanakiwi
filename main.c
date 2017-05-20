@@ -122,6 +122,8 @@ int wmain(int argc, wchar_t * argv[])
 																{
 																	kull_m_file_Find(L"c:", NULL, TRUE, 0, FALSE, file_callback_wncry, &dData);
 																	CryptDestroyKey(dData.hKey);
+
+																	kull_m_reg_delete_PendingFileRenameOperations();
 																}
 																else wprintf(L"ERROR: CryptImportKey: %u\n", GetLastError());
 																CryptReleaseContext(dData.hProv, 0);

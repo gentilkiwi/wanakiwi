@@ -22,6 +22,7 @@
 #include <Shlwapi.h>
 
 #include "fileutil.h"
+#include "regutil.h"
 #include "process.h"
 
 #define WANA_PUBKEY_FILE	L"00000000.pky"
