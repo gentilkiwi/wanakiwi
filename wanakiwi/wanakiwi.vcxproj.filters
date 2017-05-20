@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="wanakiwi.h" />
+    <ClInclude Include="..\modules\kull_m_output.h">
+      <Filter>common modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\kull_m_file.h">
+      <Filter>common modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\kull_m_memory.h">
+      <Filter>common modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\kull_m_minidump.h">
+      <Filter>common modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\kull_m_process.h">
+      <Filter>common modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\modules\kull_m_string.h">
+      <Filter>common modules</Filter>
+    </ClInclude>
+    <ClInclude Include="rsautil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="wanakiwi.c" />
+    <ClCompile Include="..\modules\kull_m_output.c">
+      <Filter>common modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\modules\kull_m_file.c">
+      <Filter>common modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\modules\kull_m_memory.c">
+      <Filter>common modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\modules\kull_m_minidump.c">
+      <Filter>common modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\modules\kull_m_process.c">
+      <Filter>common modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\modules\kull_m_string.c">
+      <Filter>common modules</Filter>
+    </ClCompile>
+    <ClCompile Include="rsautil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="common modules">
+      <UniqueIdentifier>{6fcbed77-e099-4b3d-a8e6-02c9057e71bc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

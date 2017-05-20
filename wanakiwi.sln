@@ -1,0 +1,120 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wanakiwi", "wanakiwi\wanakiwi.vcxproj", "{A138FEDE-10BC-4625-AAE4-762D25A1CF9B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "global files", "global files", "{8A8CC651-FFBD-4120-A004-D7457C58B3E8}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		win7x86.png = win7x86.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "inc", "inc", "{E9B0BD7A-96E0-4D61-8BD1-3C72609969CC}"
+	ProjectSection(SolutionItems) = preProject
+		inc\globals.h = inc\globals.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{7EBAB0BE-4659-452C-B2CE-E437A8B7F327}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "openssl", "openssl", "{7048ED05-00CA-4EA1-92CB-3D98B52EA0FE}"
+	ProjectSection(SolutionItems) = preProject
+		inc\openssl\aes.h = inc\openssl\aes.h
+		inc\openssl\asn1.h = inc\openssl\asn1.h
+		inc\openssl\asn1_mac.h = inc\openssl\asn1_mac.h
+		inc\openssl\asn1t.h = inc\openssl\asn1t.h
+		inc\openssl\bio.h = inc\openssl\bio.h
+		inc\openssl\blowfish.h = inc\openssl\blowfish.h
+		inc\openssl\bn.h = inc\openssl\bn.h
+		inc\openssl\buffer.h = inc\openssl\buffer.h
+		inc\openssl\camellia.h = inc\openssl\camellia.h
+		inc\openssl\cast.h = inc\openssl\cast.h
+		inc\openssl\cmac.h = inc\openssl\cmac.h
+		inc\openssl\cms.h = inc\openssl\cms.h
+		inc\openssl\comp.h = inc\openssl\comp.h
+		inc\openssl\conf.h = inc\openssl\conf.h
+		inc\openssl\conf_api.h = inc\openssl\conf_api.h
+		inc\openssl\crypto.h = inc\openssl\crypto.h
+		inc\openssl\des.h = inc\openssl\des.h
+		inc\openssl\des_old.h = inc\openssl\des_old.h
+		inc\openssl\dh.h = inc\openssl\dh.h
+		inc\openssl\dsa.h = inc\openssl\dsa.h
+		inc\openssl\dso.h = inc\openssl\dso.h
+		inc\openssl\dtls1.h = inc\openssl\dtls1.h
+		inc\openssl\e_os2.h = inc\openssl\e_os2.h
+		inc\openssl\ebcdic.h = inc\openssl\ebcdic.h
+		inc\openssl\ec.h = inc\openssl\ec.h
+		inc\openssl\ecdh.h = inc\openssl\ecdh.h
+		inc\openssl\ecdsa.h = inc\openssl\ecdsa.h
+		inc\openssl\engine.h = inc\openssl\engine.h
+		inc\openssl\err.h = inc\openssl\err.h
+		inc\openssl\evp.h = inc\openssl\evp.h
+		inc\openssl\hmac.h = inc\openssl\hmac.h
+		inc\openssl\idea.h = inc\openssl\idea.h
+		inc\openssl\krb5_asn.h = inc\openssl\krb5_asn.h
+		inc\openssl\kssl.h = inc\openssl\kssl.h
+		inc\openssl\lhash.h = inc\openssl\lhash.h
+		inc\openssl\md4.h = inc\openssl\md4.h
+		inc\openssl\md5.h = inc\openssl\md5.h
+		inc\openssl\mdc2.h = inc\openssl\mdc2.h
+		inc\openssl\modes.h = inc\openssl\modes.h
+		inc\openssl\obj_mac.h = inc\openssl\obj_mac.h
+		inc\openssl\objects.h = inc\openssl\objects.h
+		inc\openssl\ocsp.h = inc\openssl\ocsp.h
+		inc\openssl\opensslconf.h = inc\openssl\opensslconf.h
+		inc\openssl\opensslv.h = inc\openssl\opensslv.h
+		inc\openssl\ossl_typ.h = inc\openssl\ossl_typ.h
+		inc\openssl\pem.h = inc\openssl\pem.h
+		inc\openssl\pem2.h = inc\openssl\pem2.h
+		inc\openssl\pkcs12.h = inc\openssl\pkcs12.h
+		inc\openssl\pkcs7.h = inc\openssl\pkcs7.h
+		inc\openssl\pqueue.h = inc\openssl\pqueue.h
+		inc\openssl\rand.h = inc\openssl\rand.h
+		inc\openssl\rc2.h = inc\openssl\rc2.h
+		inc\openssl\rc4.h = inc\openssl\rc4.h
+		inc\openssl\ripemd.h = inc\openssl\ripemd.h
+		inc\openssl\rsa.h = inc\openssl\rsa.h
+		inc\openssl\safestack.h = inc\openssl\safestack.h
+		inc\openssl\seed.h = inc\openssl\seed.h
+		inc\openssl\sha.h = inc\openssl\sha.h
+		inc\openssl\srp.h = inc\openssl\srp.h
+		inc\openssl\srtp.h = inc\openssl\srtp.h
+		inc\openssl\ssl.h = inc\openssl\ssl.h
+		inc\openssl\ssl2.h = inc\openssl\ssl2.h
+		inc\openssl\ssl23.h = inc\openssl\ssl23.h
+		inc\openssl\ssl3.h = inc\openssl\ssl3.h
+		inc\openssl\stack.h = inc\openssl\stack.h
+		inc\openssl\symhacks.h = inc\openssl\symhacks.h
+		inc\openssl\tls1.h = inc\openssl\tls1.h
+		inc\openssl\ts.h = inc\openssl\ts.h
+		inc\openssl\txt_db.h = inc\openssl\txt_db.h
+		inc\openssl\ui.h = inc\openssl\ui.h
+		inc\openssl\ui_compat.h = inc\openssl\ui_compat.h
+		inc\openssl\whrlpool.h = inc\openssl\whrlpool.h
+		inc\openssl\x509.h = inc\openssl\x509.h
+		inc\openssl\x509_vfy.h = inc\openssl\x509_vfy.h
+		inc\openssl\x509v3.h = inc\openssl\x509v3.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "win32", "win32", "{2529E6CB-3C5F-4EDB-9861-B140C918AB7B}"
+	ProjectSection(SolutionItems) = preProject
+		lib\win32\libeay32.lib = lib\win32\libeay32.lib
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A138FEDE-10BC-4625-AAE4-762D25A1CF9B}.Release|Win32.ActiveCfg = Release|Win32
+		{A138FEDE-10BC-4625-AAE4-762D25A1CF9B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E9B0BD7A-96E0-4D61-8BD1-3C72609969CC} = {8A8CC651-FFBD-4120-A004-D7457C58B3E8}
+		{7EBAB0BE-4659-452C-B2CE-E437A8B7F327} = {8A8CC651-FFBD-4120-A004-D7457C58B3E8}
+		{7048ED05-00CA-4EA1-92CB-3D98B52EA0FE} = {E9B0BD7A-96E0-4D61-8BD1-3C72609969CC}
+		{2529E6CB-3C5F-4EDB-9861-B140C918AB7B} = {7EBAB0BE-4659-452C-B2CE-E437A8B7F327}
+	EndGlobalSection
+EndGlobal
