@@ -5,6 +5,7 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="fileutil.c" />
     <ClCompile Include="process.c" />
+    <ClCompile Include="regutil.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="rsautil.h" />
@@ -237,6 +238,7 @@
     <ClInclude Include="inc\openssl\x509v3.h">
       <Filter>inc\openssl</Filter>
     </ClInclude>
+    <ClInclude Include="regutil.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="lib">
