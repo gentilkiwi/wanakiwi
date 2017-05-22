@@ -22,12 +22,10 @@ int wmain(int argc, wchar_t * argv[])
 	NTSTATUS status = STATUS_SUCCESS;
 	KULL_M_MEMORY_TYPE Type;
 	PBYTE data;
-	DWORD cbData;
+	DWORD cbData, pid = 0, previousPriv;
 	PCWCHAR szData, szPubSearch, szSearch, szPrivSave;
-	HANDLE hProcess = NULL;
-	DWORD pid = 0;
 	PWCHAR p, fPub = NULL;
-
+	HANDLE hProcess = NULL;
 	DECRYPT_DATA dData = {0};
 	RSA_MEMORY kData = {0};
 
@@ -108,7 +106,11 @@ int wmain(int argc, wchar_t * argv[])
 						}
 
 						if(pid)
+						{
+							RtlAdjustPrivilege(20, TRUE, FALSE, &previousPriv);
 							hProcess = OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, FALSE, pid);
+							kull_m_reg_delete_PendingFileRenameOperations();
+						}
 						else PRINT_ERROR(L"No valid PID\n");
 					}
 
@@ -182,8 +184,6 @@ int wmain(int argc, wchar_t * argv[])
 		CryptReleaseContext(dData.hProv, 0);
 	}
 	else PRINT_ERROR_AUTO(L"CryptAcquireContext");
-
-	kull_m_reg_delete_PendingFileRenameOperations();
 	return status;
 }
 
