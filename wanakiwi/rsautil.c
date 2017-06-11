@@ -17,24 +17,6 @@
 */
 #include "rsautil.h"
 
-/* I know I don't check all return values */
-BOOL rsautil_is_prime_div_and_diff(BIGNUM *m, BIGNUM *p1, BIGNUM *p2)
-{
-	BOOL status = FALSE;
-	BN_CTX *ctx;
-	BIGNUM *r;
-	ctx = BN_CTX_new();
-	if(BN_is_prime_fasttest_ex(p1, 2, ctx, 0, NULL) > 0)
-	{
-		r = BN_new();
-		BN_div(p2, r, m, p1, ctx);
-		status = BN_is_zero(r);
-		BN_free(r);
-	}
-	BN_CTX_free(ctx);
-	return status;
-}
-
 BOOL rsautil_quickimport(RSA *rsa, BIGNUM *e_value, BIGNUM *p_value, BIGNUM *q_value, OPTIONAL BIGNUM *n_value)
 {
 	BIGNUM *r0, *r1, *r2;
@@ -112,15 +94,15 @@ BOOL rsautil_pubkeyblob_to_rsa(PBYTE blob, DWORD cbBlob, RSA **rsa)
 	BOOL status = FALSE;
 	EVP_PKEY *pubKey;
 	RSA *tmp;
-		if(pubKey = b2i_PublicKey(&blob, cbBlob))
+	if(pubKey = b2i_PublicKey(&blob, cbBlob))
+	{
+		if(tmp = EVP_PKEY_get1_RSA(pubKey))
 		{
-			if(tmp = EVP_PKEY_get1_RSA(pubKey))
-			{
-				*rsa = RSAPublicKey_dup(tmp);
-				status = (*rsa != NULL);
-			}
-			EVP_PKEY_free(pubKey);
+			*rsa = RSAPublicKey_dup(tmp);
+			status = (*rsa != NULL);
 		}
+		EVP_PKEY_free(pubKey);
+	}
 	return status;
 }
 
@@ -130,14 +112,12 @@ BOOL rsautil_pubkeyfile_to_new_e_n(PCWSTR filename, BIGNUM **e, BIGNUM **n)
 	PBYTE blob;
 	DWORD cbBlob;
 	RSA *rsa;
-
-	*e = BN_new();
-	*n = BN_new();
-
 	if(kull_m_file_readData(filename, &blob, &cbBlob))
 	{
 		if(status = rsautil_pubkeyblob_to_rsa(blob, cbBlob, &rsa))
 		{
+			*e = BN_new();
+			*n = BN_new();
 			BN_copy(*e, rsa->e);
 			BN_copy(*n, rsa->n);
 			RSA_free(rsa);
@@ -145,13 +125,7 @@ BOOL rsautil_pubkeyfile_to_new_e_n(PCWSTR filename, BIGNUM **e, BIGNUM **n)
 		LocalFree(blob);
 	}
 	else PRINT_ERROR_AUTO(L"fileutil_readData");
-
-	if(!status)
-	{
-		BN_free(*e);
-		BN_free(*n);
-	}
-	return TRUE;//status;
+	return status;
 }
 
 BOOL SIMPLE_kull_m_crypto_hkey(HCRYPTPROV hProv, ALG_ID calgid, LPCVOID key, DWORD keyLen, DWORD flags, HCRYPTKEY *hKey)
@@ -243,8 +217,8 @@ DOUBLE rsautil_normalizedEntropy(LPCBYTE data, DWORD len)
 {
 	DOUBLE ret = 0.0, p;
 	DWORD i, hist[256] = {0};
-	for (i = 0; i < len; ++i)
-		++hist[data[i]];
+	for (i = 0; i < len; i++)
+		hist[data[i]]++;
 
 	for(i = 0; i < ARRAYSIZE(hist); i++)
 	{

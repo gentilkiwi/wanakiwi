@@ -53,7 +53,6 @@ typedef struct _DEC_PRIV_KEY {
 	BYTE data[ANYSIZE_ARRAY];
 } DEC_PRIV_KEY, *PDEC_PRIV_KEY;
 
-BOOL rsautil_is_prime_div_and_diff(BIGNUM *m, BIGNUM *p1, BIGNUM *p2);
 BOOL rsautil_quickimport(RSA *rsa, BIGNUM *e_value, BIGNUM *p_value, BIGNUM *q_value, OPTIONAL BIGNUM *n_value);
 BOOL rsautil_rsa_to_privkeyblob(RSA *rsa, PBYTE *blob, DWORD *cbBlob);
 BOOL rsautil_pubkeyblob_to_rsa(PBYTE blob, DWORD cbBlob, RSA **rsa);

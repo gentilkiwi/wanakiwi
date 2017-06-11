@@ -25,6 +25,7 @@
 
 typedef struct _RSA_MEMORY_DATA {
 	PKULL_M_MEMORY_HANDLE hProcessMemory;
+	DOUBLE minEntropy;
 	BIGNUM *bn_modulus;
 	BIGNUM *bn_e;
 	RSA *rsa;
